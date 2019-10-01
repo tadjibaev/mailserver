@@ -1,7 +1,7 @@
 var MailListener = require("mail-listener2");
 
 var mailListener = new MailListener({
-  username: "ulugbek.tadjibaev.logostics@gmail.com",
+  username: "ulugbek.tadjibaev.logistics@gmail.com",
   password: "1187700000",
   host: "imap.gmail.com",
   port: 993, // imap port
