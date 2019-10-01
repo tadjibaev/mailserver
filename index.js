@@ -2,7 +2,7 @@ var MailListener = require("mail-listener2");
 
 var mailListener = new MailListener({
   username: "ulugbek.tadjibaev.logistics@gmail.com",
-  password: "1187700000",
+  password: "irsppcghjhykfurt",
   host: "imap.gmail.com",
   port: 993, // imap port
   tls: true,
@@ -38,7 +38,18 @@ mailListener.on("error", function(err){
 
 mailListener.on("mail", function(mail, seqno, attributes){
   // do something with mail object including attachments
-  console.log("emailParsed", mail);
+const axios = require('axios')
+
+axios.post('http://www.shipjack.world/api/v1/web/load', {
+  mail: mail
+})
+.then((res) => {
+  console.log(`statusCode: ${res.statusCode}`)
+  console.log(res)
+})
+.catch((error) => {
+  console.error(error)
+})
   // mail processing code goes here
 });
 
