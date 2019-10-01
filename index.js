@@ -1,9 +1,9 @@
 var MailListener = require("mail-listener2");
 
 var mailListener = new MailListener({
-  username: "imap-username",
-  password: "imap-password",
-  host: "imap-host",
+  username: "ulugbek.tadjibaev.logostics@gmail.com",
+  password: "1187700000",
+  host: "imap.gmail.com",
   port: 993, // imap port
   tls: true,
   connTimeout: 10000, // Default by node-imap
@@ -47,4 +47,4 @@ mailListener.on("attachment", function(attachment){
 });
 
 // it's possible to access imap object from node-imap library for performing additional actions. E.x.
-mailListener.imap.move(:msguids, :mailboxes, function(){})
+// mailListener.imap.move(:msguids, :mailboxes, function(){})
